@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathein Thar - Seafood Distribution</title>
+    <meta name="description" content="Pathein Thar - Premium Seafood Distribution in Myanmar. High-quality Ready to Fry, Ready to Cook, and Ready to Steam seafood products including Dimsum, Shrimp, and Squid.">
+    <meta name="keywords" content="myanmar, seafood, readymake, pathein thar, frozen food, ready to eat, dimsum, seafood distribution">
+    
+    <!-- Meta Refresh Fallback for Non-JS users/bots -->
+    <meta http-equiv="refresh" content="0;url=en/">
+    
+    <!-- SEO & Language Tags -->
+    <link rel="canonical" href="https://patheinthar.com/" />
+    <link rel="alternate" hreflang="my" href="https://patheinthar.com/my/" />
+    <link rel="alternate" hreflang="en" href="https://patheinthar.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://patheinthar.com/" />
+    
+    <script>
+        // Detection Logic
+        (function() {
+            const preferredLang = localStorage.getItem('preferred_lang');
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            let targetDir = 'en/'; // Default to English
+            
+            if (preferredLang) {
+                targetDir = preferredLang === 'my' ? 'my/' : 'en/';
+            } else if (browserLang && (browserLang.startsWith('my') || browserLang.startsWith('bur'))) {
+                targetDir = 'my/';
+            }
+            
+            window.location.replace(targetDir);
+        })();
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f8f9fa;">
+    <div style="text-align: center;">
+        <p>Redirecting to your language...</p>
+        <p><a href="en/">English Version</a> | <a href="my/">Myanmar Version</a></p>
+    </div>
+</body>
+</html>

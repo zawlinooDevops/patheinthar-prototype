@@ -1,0 +1,69 @@
+/* ================================================= */
+/* Section Specific Styles */
+/* ================================================= */
+
+
+/* Product Cards & Animations */
+.product-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Scroll Animations Classes */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-out;
+}
+
+.reveal-show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* Circular Product Badge */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 65px;
+    height: 65px;
+    background-color: var(--ocean-dark);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    line-height: 1.2;
+    z-index: 2;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    /* Add smooth transition for the hover rotation */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+/* Badge interactions on card hover */
+.product-card:hover .product-badge {
+    transform: rotate(20deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}

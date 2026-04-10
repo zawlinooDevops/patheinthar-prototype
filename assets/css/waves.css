@@ -1,0 +1,58 @@
+/* ================================================= */
+/* Wave Animation Logic */
+/* ================================================= */
+.waves-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    line-height: 0;
+    /* Fix mobile subpixel rendering gaps on SVG borders */
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.wave-item {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    bottom: 0;
+    background-repeat: repeat-x;
+    animation: waveFlow linear infinite;
+}
+
+@keyframes waveFlow {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: 600px;
+    }
+}
+
+#wave-light {
+    z-index: 1;
+    background-image: var(--svg-wave-light);
+    background-size: 400px 100px;
+    animation-duration: 25s;
+    bottom: 20px;
+}
+
+#wave-med {
+    z-index: 2;
+    background-image: var(--svg-wave-med);
+    background-size: 300px 100px;
+    animation-duration: 18s;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+#wave-dark {
+    z-index: 3;
+    background-image: var(--svg-wave-dark);
+    background-size: 250px 100px;
+    animation-duration: 12s;
+    animation-delay: -2s;
+    bottom: 0;
+}

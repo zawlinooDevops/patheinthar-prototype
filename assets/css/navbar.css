@@ -1,0 +1,78 @@
+/* ================================================= */
+/* NAVIGATION BAR CUSTOMIZATION (DETAILED) */
+/* ================================================= */
+
+/* Navbar ရဲ့ padding ကို 0 ထားမှ link height က အပြည့်ရမှာဖြစ်ပါတယ် */
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 80px;
+    /* Navbar ၏ ပုံသေသတ်မှတ်ထားသော အမြင့် */
+}
+
+.navbar-brand {
+    padding: 15px 0;
+}
+
+/* Nav Item များကို Full Height ဖြစ်အောင် ပြုလုပ်ခြင်း */
+.navbar-nav {
+    height: 100%;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    padding-left: 10px !important;
+    /* ဘေးနှစ်ဖက် padding လျှော့ချခြင်း */
+    padding-right: 10px !important;
+    margin-right: 2px !important; /* Menu item များကြား အနည်းငယ်ခြားခြင်း */
+    color: var(--ocean-dark) !important;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid transparent;
+    /* Layout မရွေ့စေရန် base border ထားခြင်း */
+}
+
+/* Hover နှင့် Active State အတွက် အပြာရောင်စာလုံးနှင့် အောက်ခံလိုင်း */
+.nav-link:hover,
+.nav-link.active {
+    background-color: transparent !important;
+    color: var(--ocean-med) !important;
+    border-bottom: 3px solid var(--ocean-med) !important;
+}
+
+/* Mobile View အတွက် ချိန်ညှိချက် (Optional) */
+@media (max-width: 991.98px) {
+    .nav-link {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-collapse {
+        background-color: white;
+    }
+}
+
+/* Logo Bounce Animation - 3s interval bounce from bottom to top */
+@keyframes bounceUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.logo-bounce {
+    animation: bounceUp 3s infinite ease-in-out;
+}
